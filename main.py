@@ -7,11 +7,13 @@ class City:
     self.name = res["data"][0]["name"]
     self.lat = res["data"][0]["latitude"]
     self.lon = res["data"][0]["longitude"]
-
-
+    self.pop = res["data"][0]["population"]
+    self.cont = res["data"][0]["country"]
 c = input("Введіть місто:")
 city = City(c)
 
 print(city.name)
+print(city.cont)
+print(city.pop)
 print(city.lat)
 print(city.lon)
